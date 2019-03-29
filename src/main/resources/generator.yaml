@@ -1,0 +1,17 @@
+##########################################################服务消费者配置示例##########################################################
+db:
+  url:
+  username:
+  password:
+author: auto
+packageName: com.yfny.feigndemandpc
+entityPackageName: com.yfny.corepojo.entity.demandform
+path:
+  controller: controller
+  service: service
+  interf: service
+  entity:
+  mapper:
+  hystrix: fallback
+  basetest: base
+  unittest: unit
