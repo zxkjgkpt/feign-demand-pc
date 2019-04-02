@@ -33,7 +33,7 @@ public class XqdxxController extends BaseController<XqdxxEntity> {
      */
     @PostMapping(value = "/findXqdxxByCondition")
     @ResponseBody
-    public InvokeResult findXqdxxByCondition1(XqdxxEntity xqdxx) throws Exception {
+    public InvokeResult findXqdxxByCondition1(@RequestBody XqdxxEntity xqdxx) throws Exception {
         List<XqdxxEntity> result = xqdxxService.findXqdxxByCondition(xqdxx);
         if (result != null) {
             return InvokeResult.success(result);
@@ -52,7 +52,7 @@ public class XqdxxController extends BaseController<XqdxxEntity> {
      */
     @PostMapping(value = "/findXqdxxByCondition/{pageNum}/{pageSize}")
     @ResponseBody
-    public InvokeResult findXqdxxByCondition2(XqdxxEntity xqdxx,
+    public InvokeResult findXqdxxByCondition2(@RequestBody XqdxxEntity xqdxx,
                 @PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize) throws Exception {
         List<XqdxxEntity> result = xqdxxService.findXqdxxByCondition(xqdxx, pageNum, pageSize);
         if (result != null) {
