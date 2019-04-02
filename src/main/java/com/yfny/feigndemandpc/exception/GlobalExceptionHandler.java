@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 统一异常处理机制
  * Author auto
- * Date  2019-03-28
+ * Date  2019-04-02
  */
 @ControllerAdvice
 public class GlobalExceptionHandler {

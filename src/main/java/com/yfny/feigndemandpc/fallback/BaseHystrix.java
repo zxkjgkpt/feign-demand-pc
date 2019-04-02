@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 服务消费者通用Hystrix
  * Author auto
- * Date  2019-03-28
+ * Date  2019-04-02
  */
 public class BaseHystrix<T> implements BaseService<T> {
 

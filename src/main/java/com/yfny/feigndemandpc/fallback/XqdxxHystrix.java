@@ -4,12 +4,24 @@ import com.yfny.corepojo.entity.demandform.XqdxxEntity;
 import com.yfny.feigndemandpc.service.XqdxxService;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * 需求单详情Hystrix
  * Author auto
- * Date  2019-03-28
+ * Date  2019-04-02
  */
 @Component
 public class XqdxxHystrix extends BaseHystrix<XqdxxEntity> implements XqdxxService {
+
+    @Override
+    public List<XqdxxEntity> findXqdxxByCondition(XqdxxEntity xqdxx) {
+        return null;
+    }
+
+     @Override
+     public List<XqdxxEntity> findXqdxxByCondition(XqdxxEntity xqdxx, int pageNum, int pageSize) {
+         return null;
+     }
 
 }

@@ -5,11 +5,11 @@ db:
   password:
 author: auto
 packageName: com.yfny.feigndemandpc
-entityPackageName: com.yfny.corepojo.entity.demandform
+entityPackageName: com.yfny.corepojo
 path:
   controller: controller
   service: service
-  entity:
+  entity: entity.demandform
   mapper:
   sqlbuilder:
   hystrix: fallback
