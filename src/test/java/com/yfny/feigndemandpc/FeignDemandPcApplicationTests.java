@@ -51,12 +51,19 @@ public class FeignDemandPcApplicationTests {
 //                .build();
 //        invoker2.execute();
 
-        Invoker invoker3 = new ConsumerInvoker.Builder()
-                .setClassName("Yyyxx")
-                .setDescription("需求单应用域详情")
+//        Invoker invoker3 = new ConsumerInvoker.Builder()
+//                .setClassName("Yyyxx")
+//                .setDescription("需求单应用域详情")
+//                .setApplicationName("service-demandform")
+//                .build();
+//        invoker3.execute();
+
+        Invoker invoker4 = new ConsumerInvoker.Builder()
+                .setClassName("XqdFile")
+                .setDescription("需求单附件")
                 .setApplicationName("service-demandform")
                 .build();
-        invoker3.execute();
+        invoker4.execute();
     }
 
     @Test
