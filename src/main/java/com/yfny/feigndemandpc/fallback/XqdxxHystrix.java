@@ -15,12 +15,22 @@ import java.util.List;
 public class XqdxxHystrix extends BaseHystrix<XqdxxEntity> implements XqdxxService {
 
     @Override
+    public List<XqdxxEntity> findSimpleXqdxxByAndCondition(XqdxxEntity xqdxx) {
+        return null;
+    }
+
+    @Override
     public List<XqdxxEntity> findXqdxxByAndCondition(XqdxxEntity xqdxx) {
         return null;
     }
 
     @Override
     public List<XqdxxEntity> findXqdxxByAndCondition(XqdxxEntity xqdxx, int pageNum, int pageSize) {
+        return null;
+    }
+
+    @Override
+    public List<XqdxxEntity> findSimpleXqdxxByORCondition(XqdxxEntity xqdxx) {
         return null;
     }
 

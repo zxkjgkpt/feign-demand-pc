@@ -21,6 +21,15 @@ public interface XqdxxService extends BaseService<XqdxxEntity> {
      * @param   xqdxx    对象实体
      * @return  对象列表
      */
+    @PostMapping(value = "/findSimpleXqdxxByAndCondition")
+    List<XqdxxEntity> findSimpleXqdxxByAndCondition(@RequestBody XqdxxEntity xqdxx);
+
+    /**
+     * 根据实体中的属性值进行查询，查询条件使用LIKE，并列查询取交集
+     *
+     * @param   xqdxx    对象实体
+     * @return  对象列表
+     */
     @PostMapping(value = "/findXqdxxByAndCondition")
     List<XqdxxEntity> findXqdxxByAndCondition(@RequestBody XqdxxEntity xqdxx);
 
@@ -34,6 +43,15 @@ public interface XqdxxService extends BaseService<XqdxxEntity> {
      */
     @PostMapping(value = "/findXqdxxByAndCondition/{pageNum}/{pageSize}")
     List<XqdxxEntity> findXqdxxByAndCondition(@RequestBody XqdxxEntity xqdxx, @PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize);
+
+    /**
+     * 根据实体中的属性值进行查询，查询条件使用LIKE，亦或查询取并集
+     *
+     * @param   xqdxx    对象实体
+     * @return  对象列表
+     */
+    @PostMapping(value = "/findSimpleXqdxxByORCondition")
+    List<XqdxxEntity> findSimpleXqdxxByORCondition(@RequestBody XqdxxEntity xqdxx);
 
     /**
      * 根据实体中的属性值进行查询，查询条件使用LIKE，亦或查询取并集
