@@ -2,6 +2,15 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+  # 自定义实例编号
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    # 配置使用主机名注册服务
+    hostname: peer1
+    # 优先使用IP地址方式进行注册服务
+    prefer-ip-address: true
+    # 配置使用指定IP
+    ip-address: 127.0.0.1
 server:
   port: 8772
 spring:
@@ -12,10 +21,24 @@ spring:
 
   main:
     allow-bean-definition-overriding: true
+  servlet:
+    multipart:
+      max-file-size: 60MB
+      max-request-size: 60MB
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
 
 feign:
   hystrix:
     enabled: true
+  client:
+    activity-url: localhost:8768
 #ribbon请求连接的超时时间
 ribbon:
   ConnectTimeout: 4000
@@ -31,7 +54,7 @@ ribbon:
 #TC配置信息
 tx-lcn:
   client:
-    manager-address:
+    manager-address: 
 #TC日志
 logging:
   level:

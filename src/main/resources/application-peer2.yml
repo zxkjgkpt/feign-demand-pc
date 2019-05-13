@@ -14,6 +14,8 @@ eureka:
 feign:
   hystrix:
     enabled: true
+  client:
+    activity-url: ${peer2.feign.client.activity-url}
 #ribbon请求连接的超时时间
 ribbon:
   ConnectTimeout: ${ribbon.ConnectTimeout}

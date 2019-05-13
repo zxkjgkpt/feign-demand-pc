@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
-    <property name="LOG_HOME" value="D://logTest/feign-demand-pc" />
+    <property name="LOG_HOME" value="/logs/feign-demand-pc" />
 
     <!-- 彩色日志 -->
     <!-- 彩色日志依赖的渲染类 -->
@@ -38,7 +38,7 @@
 
 
     <!-- name包必须能够扫描到所有类，包括启动类 -->
-    <logger name="com.yfny.utilscommon.businesslog.BusinessLogAOP" level="debug" additivity="false">
+    <logger name="com.yfny.utilscommon.annotation.businesslog.BusinessLogAOP" level="debug" additivity="false">
         <!--业务日志文件开启-->
         <appender-ref ref="businessFile" />
     </logger>
